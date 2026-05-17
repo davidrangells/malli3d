@@ -1,0 +1,892 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Malli3D — Impressões Premium · Produtos criativos em impressão 3D</title>
+<meta name="description" content="Produtos exclusivos em impressão 3D: linha Copa do Mundo, porta figurinhas, chaveiros, organizadores e peças personalizadas. Compra segura pelo Mercado Livre." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="malli3d-landing.css" />
+</head>
+<body>
+
+<!-- =============================================================
+     SVG SYMBOLS — referenced via <use href="#sym-id"> below
+     ============================================================= -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <!-- Isometric M cube (brand symbol) -->
+    <symbol id="iso-mark" viewBox="0 0 100 100">
+      <path d="M50 8 L86 28 L50 48 L14 28 Z" fill="#E8D28A" />
+      <path d="M14 28 L50 48 L50 90 L14 70 Z" fill="#C9A449" />
+      <path d="M86 28 L86 70 L50 90 L50 48 Z" fill="#9C7E36" />
+      <g stroke="#050505" stroke-width="2" fill="none" stroke-linejoin="miter">
+        <path d="M50 8 L86 28 L50 48 L14 28 Z" />
+        <path d="M14 28 L50 48 L50 90 L14 70 Z" />
+        <path d="M86 28 L86 70 L50 90 L50 48 Z" />
+        <path d="M14 42 L50 62" opacity=".55" />
+        <path d="M14 56 L50 76" opacity=".55" />
+        <path d="M86 42 L50 62" opacity=".55" />
+        <path d="M86 56 L50 76" opacity=".55" />
+      </g>
+    </symbol>
+
+    <!-- Outline variant of the same mark, for icons -->
+    <symbol id="iso-mark-line" viewBox="0 0 100 100">
+      <g fill="none" stroke="currentColor" stroke-width="3" stroke-linejoin="miter">
+        <path d="M50 8 L86 28 L50 48 L14 28 Z" />
+        <path d="M14 28 L50 48 L50 90 L14 70 Z" />
+        <path d="M86 28 L86 70 L50 90 L50 48 Z" />
+      </g>
+    </symbol>
+
+    <!-- Iconography (geometric, line-based) -->
+    <symbol id="i-trophy" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="square" stroke-linejoin="miter">
+      <path d="M7 4h10v5a5 5 0 0 1-10 0z" />
+      <path d="M7 6H4v2a3 3 0 0 0 3 3" />
+      <path d="M17 6h3v2a3 3 0 0 1-3 3" />
+      <path d="M10 14h4l-1 4h-2z" />
+      <path d="M8 20h8" />
+    </symbol>
+    <symbol id="i-key" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="square" stroke-linejoin="miter">
+      <circle cx="8" cy="12" r="4" />
+      <path d="M12 12h10" /><path d="M18 12v3" /><path d="M21 12v4" />
+    </symbol>
+    <symbol id="i-grid" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="miter">
+      <rect x="4" y="4" width="7" height="7" /><rect x="13" y="4" width="7" height="7" />
+      <rect x="4" y="13" width="7" height="7" /><rect x="13" y="13" width="7" height="7" />
+    </symbol>
+    <symbol id="i-spark" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="miter">
+      <path d="M12 3v6M12 15v6M3 12h6M15 12h6" /><path d="M6 6l3 3M15 15l3 3M18 6l-3 3M9 15l-3 3" />
+    </symbol>
+    <symbol id="i-gift" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="miter">
+      <rect x="3" y="9" width="18" height="12" /><path d="M3 13h18" /><path d="M12 9v12" />
+      <path d="M12 9c-2 0-4-1-4-3s2-3 4 0c2-3 4-2 4 0s-2 3-4 3z" />
+    </symbol>
+    <symbol id="i-tag" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="miter">
+      <path d="M3 12V3h9l9 9-9 9z" /><circle cx="8" cy="8" r="1.4" fill="currentColor" />
+    </symbol>
+    <symbol id="i-cube" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="miter">
+      <path d="M12 3l9 5v8l-9 5-9-5V8z" /><path d="M3 8l9 5 9-5" /><path d="M12 13v10" />
+    </symbol>
+    <symbol id="i-shield" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="miter">
+      <path d="M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6z" /><path d="M9 12l2 2 4-4" />
+    </symbol>
+    <symbol id="i-bolt" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="miter">
+      <path d="M13 3L4 14h6l-1 7 9-11h-6z" />
+    </symbol>
+    <symbol id="i-tools" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="miter">
+      <path d="M14 3a4 4 0 0 1 5 5l-3 1-2-2z" /><path d="M14 7L4 17l3 3 10-10" />
+    </symbol>
+    <symbol id="i-truck" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="miter">
+      <rect x="2" y="6" width="12" height="10" /><path d="M14 9h5l3 4v3h-8" />
+      <circle cx="7" cy="18" r="2" /><circle cx="17" cy="18" r="2" />
+    </symbol>
+    <symbol id="i-chat" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="miter">
+      <path d="M3 5h18v12H8l-5 4z" /><path d="M7 10h10M7 13h6" />
+    </symbol>
+    <symbol id="i-star" viewBox="0 0 24 24" fill="currentColor">
+      <path d="M12 3l2.6 6 6.4.5-5 4.4 1.6 6.3L12 16.9 6.4 20.2 8 13.9 3 9.5l6.4-.5z" />
+    </symbol>
+    <symbol id="i-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="square">
+      <path d="M4 12h16M14 6l6 6-6 6" />
+    </symbol>
+    <symbol id="i-wa" viewBox="0 0 24 24" fill="currentColor">
+      <path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm5.4 14.2c-.2.7-1.2 1.3-1.8 1.4-.5.1-1.1.1-1.8-.1-.4-.1-1-.3-1.7-.6-3-1.3-5-4.3-5.1-4.5-.1-.2-1.2-1.6-1.2-3 0-1.5.8-2.2 1-2.5.3-.3.6-.4.8-.4h.6c.2 0 .5 0 .7.5l1 2.5c.1.2.1.4 0 .6l-.4.5c-.1.2-.3.3-.1.6.2.3.8 1.3 1.8 2.1 1.2 1.1 2.2 1.4 2.5 1.6.3.1.5.1.7-.1l.8-1c.2-.3.4-.2.7-.1l2.4 1.1c.3.2.5.3.6.4 0 .2 0 .8-.2 1.5z" />
+    </symbol>
+  </defs>
+</svg>
+
+
+<!-- =============================================================
+     HEADER
+     ============================================================= -->
+<header class="site-header" id="site-header">
+  <div class="container header-inner">
+    <a href="#top" class="brand" aria-label="Malli3D — Impressões Premium">
+      <!-- 🔁 SUBSTITUIR: logo (se trocar por arquivo de imagem, manter alt) -->
+      <svg class="brand-mark" viewBox="0 0 100 100" aria-hidden="true"><use href="#iso-mark"/></svg>
+      <span class="brand-text">
+        <span class="brand-name">Malli<em>3D</em></span>
+        <span class="brand-tag">Impressões Premium</span>
+      </span>
+    </a>
+
+    <nav class="nav" id="nav-menu">
+      <a href="#top">Início</a>
+      <a href="#copa">Copa do Mundo</a>
+      <a href="#produtos">Produtos</a>
+      <a href="#personalizados">Personalizados</a>
+      <a href="#como-comprar">Como Comprar</a>
+      <a href="#contato">Contato</a>
+    </nav>
+
+    <!-- 🔁 SUBSTITUIR: link geral da loja no Mercado Livre -->
+    <a class="btn btn-gold btn-sm header-cta" href="https://lista.mercadolivre.com.br/_CustId_MALLI3D" target="_blank" rel="noopener">
+      Comprar no Mercado Livre
+      <svg viewBox="0 0 24 24" width="14" height="14" aria-hidden="true"><use href="#i-arrow"/></svg>
+    </a>
+
+    <button class="menu-toggle" id="menu-toggle" aria-label="Abrir menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+
+<main id="top">
+
+<!-- =============================================================
+     1 · HERO
+     ============================================================= -->
+<section class="hero">
+  <div class="hero-bg" aria-hidden="true"></div>
+  <div class="container hero-grid">
+    <div class="hero-copy">
+      <div class="eyebrow">
+        <span class="dot"></span>
+        <span>Linha Copa do Mundo · Edição limitada</span>
+      </div>
+      <h1 class="display">
+        Produtos criativos em <em>impressão&nbsp;3D</em><br/>
+        com acabamento <span class="gold-text">premium</span>.
+      </h1>
+      <p class="lede">
+        Peças exclusivas, funcionais e personalizadas para colecionar, presentear, organizar e decorar. Escolha seu produto favorito e compre com segurança pelo Mercado Livre.
+      </p>
+      <div class="cta-row">
+        <a href="#copa" class="btn btn-gold">
+          Ver linha Copa do Mundo
+          <svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><use href="#i-arrow"/></svg>
+        </a>
+        <!-- 🔁 SUBSTITUIR: link geral da loja -->
+        <a href="https://lista.mercadolivre.com.br/_CustId_MALLI3D" target="_blank" rel="noopener" class="btn btn-ghost">
+          Comprar no Mercado Livre
+        </a>
+      </div>
+      <ul class="trust-pills">
+        <li><svg viewBox="0 0 24 24"><use href="#i-shield"/></svg>Compra segura pelo Mercado Livre</li>
+        <li><svg viewBox="0 0 24 24"><use href="#i-cube"/></svg>Produção em impressão 3D</li>
+        <li><svg viewBox="0 0 24 24"><use href="#i-spark"/></svg>Produtos personalizados</li>
+        <li><svg viewBox="0 0 24 24"><use href="#i-star"/></svg>Acabamento premium</li>
+      </ul>
+    </div>
+
+    <div class="hero-visual" aria-hidden="true">
+      <div class="hero-card hero-card-main">
+        <span class="hero-tag">FIG·01</span>
+        <!-- 🔁 SUBSTITUIR: imagem real do porta figurinhas -->
+        <img src="img/hero-malli3d-copa.png" alt="Produtos Malli3D da linha Copa do Mundo em impressão 3D" class="product-img product-img-tall" fetchpriority="high" />
+        <div class="hero-card-meta">
+          <span>Porta figurinhas</span>
+          <span class="hero-card-price">R$ 49,90<small>+</small></span>
+        </div>
+      </div>
+      <div class="hero-card hero-card-sm hero-card-a">
+        <!-- 🔁 SUBSTITUIR: imagem chaveiro taça -->
+        <img src="img/chaveiro-taca-copa.png" alt="Chaveiro taça da Copa Malli3D" class="product-img product-img-square" loading="lazy" />
+        <span class="hero-tag-sm">Chaveiro · Taça</span>
+      </div>
+      <div class="hero-card hero-card-sm hero-card-b">
+        <!-- 🔁 SUBSTITUIR: imagem mini troféu -->
+        <img src="img/lembrancinhas-personalizadas.png" alt="Mini troféu decorativo Malli3D" class="product-img product-img-square" loading="lazy" />
+        <span class="hero-tag-sm">Mini troféu</span>
+      </div>
+      <div class="hero-card hero-card-sm hero-card-c">
+        <!-- 🔁 SUBSTITUIR: imagem suporte álbum -->
+        <img src="img/suporte-album-figurinhas.png" alt="Suporte para álbum de figurinhas Malli3D" class="product-img product-img-square" loading="lazy" />
+        <span class="hero-tag-sm">Suporte álbum</span>
+      </div>
+
+      <div class="hero-deco hero-deco-1"></div>
+      <div class="hero-deco hero-deco-2"></div>
+    </div>
+  </div>
+
+  <div class="container hero-marquee">
+    <span>TECNOLOGIA</span><span>·</span>
+    <span>PERSONALIZAÇÃO</span><span>·</span>
+    <span>QUALIDADE</span><span>·</span>
+    <span>CRIATIVIDADE</span><span>·</span>
+    <span>SOFISTICAÇÃO</span><span>·</span>
+    <span>IMPRESSÃO 3D PREMIUM</span>
+  </div>
+</section>
+
+
+<!-- =============================================================
+     2 · COPA DO MUNDO — Linha em destaque
+     ============================================================= -->
+<section class="section section-dark" id="copa">
+  <div class="container">
+    <div class="section-head">
+      <div>
+        <div class="kicker"><span class="kicker-num">01</span> · Edição limitada</div>
+        <h2 class="h-display">Linha especial <span class="gold-text italic">Copa do Mundo</span></h2>
+      </div>
+      <p class="section-lede">
+        Entre no clima da Copa com produtos 3D criativos para colecionadores, torcedores, crianças, famílias e apaixonados por futebol.
+      </p>
+    </div>
+
+    <div class="copa-grid">
+      <!-- Card 1 — Porta figurinhas -->
+      <article class="product-card product-card-featured">
+        <!-- 🔁 SUBSTITUIR: imagem produto + link Mercado Livre -->
+        <a class="product-media" href="https://produto.mercadolivre.com.br/link-do-produto-1" target="_blank" rel="noopener" aria-label="Porta Figurinhas da Copa no Mercado Livre">
+          <img src="img/porta-figurinhas-copa.png" alt="Porta figurinhas da Copa em impressão 3D Malli3D" class="product-img product-img-product" loading="lazy" />
+          <span class="product-chip">Mais vendido</span>
+        </a>
+        <div class="product-body">
+          <h3>Porta Figurinhas da Copa</h3>
+          <p>Organize suas figurinhas repetidas, faltantes e favoritas com um porta figurinhas temático, prático e feito em impressão 3D.</p>
+          <ul class="benefits">
+            <li>Ideal para colecionadores</li>
+            <li>Separa repetidas e faltantes</li>
+            <li>Criativo e funcional</li>
+            <li>Para crianças e fãs de futebol</li>
+          </ul>
+          <!-- 🔁 SUBSTITUIR: link Mercado Livre produto 1 -->
+          <a class="btn btn-gold btn-full" href="https://produto.mercadolivre.com.br/link-do-produto-1" target="_blank" rel="noopener">
+            Comprar no Mercado Livre
+            <svg viewBox="0 0 24 24" width="16" height="16"><use href="#i-arrow"/></svg>
+          </a>
+        </div>
+      </article>
+
+      <!-- Card 2 -->
+      <article class="product-card">
+        <a class="product-media" href="https://produto.mercadolivre.com.br/link-do-produto-2" target="_blank" rel="noopener" aria-label="Chaveiro Taça da Copa no Mercado Livre">
+          <!-- 🔁 SUBSTITUIR: imagem chaveiro -->
+          <img src="img/chaveiro-taca-copa.png" alt="Chaveiro taça da Copa em impressão 3D Malli3D" class="product-img product-img-product" loading="lazy" />
+        </a>
+        <div class="product-body">
+          <h3>Chaveiro Taça da Copa</h3>
+          <p>Chaveiro temático inspirado na taça, perfeito para fãs de futebol, lembrancinhas e presentes criativos.</p>
+          <ul class="benefits">
+            <li>Leve e criativo</li>
+            <li>Ótimo para presentear</li>
+            <li>Feito em impressão 3D</li>
+          </ul>
+          <!-- 🔁 SUBSTITUIR: link Mercado Livre produto 2 -->
+          <a class="btn btn-gold btn-full" href="https://produto.mercadolivre.com.br/link-do-produto-2" target="_blank" rel="noopener">
+            Comprar no Mercado Livre
+            <svg viewBox="0 0 24 24" width="16" height="16"><use href="#i-arrow"/></svg>
+          </a>
+        </div>
+      </article>
+
+      <!-- Card 3 -->
+      <article class="product-card">
+        <a class="product-media" href="https://produto.mercadolivre.com.br/link-do-produto-3" target="_blank" rel="noopener" aria-label="Mini Troféu Decorativo no Mercado Livre">
+          <!-- 🔁 SUBSTITUIR: imagem mini troféu -->
+          <img src="img/mini-trofeu-decorativo.png" alt="Mini troféu decorativo em impressão 3D Malli3D" class="product-img product-img-product" loading="lazy" />
+        </a>
+        <div class="product-body">
+          <h3>Mini Troféu Decorativo</h3>
+          <p>Peça decorativa em impressão 3D para entrar no clima da Copa e deixar o ambiente mais temático.</p>
+          <ul class="benefits">
+            <li>Ideal para decoração</li>
+            <li>Visual criativo</li>
+            <li>Para eventos e lembrancinhas</li>
+          </ul>
+          <!-- 🔁 SUBSTITUIR: link Mercado Livre produto 3 -->
+          <a class="btn btn-gold btn-full" href="https://produto.mercadolivre.com.br/link-do-produto-3" target="_blank" rel="noopener">
+            Comprar no Mercado Livre
+            <svg viewBox="0 0 24 24" width="16" height="16"><use href="#i-arrow"/></svg>
+          </a>
+        </div>
+      </article>
+
+      <!-- Card 4 -->
+      <article class="product-card">
+        <a class="product-media" href="https://produto.mercadolivre.com.br/link-do-produto-4" target="_blank" rel="noopener" aria-label="Suporte para Álbum no Mercado Livre">
+          <!-- 🔁 SUBSTITUIR: imagem suporte álbum -->
+          <img src="img/suporte-album-figurinhas.png" alt="Suporte para álbum de figurinhas em impressão 3D Malli3D" class="product-img product-img-product" loading="lazy" />
+        </a>
+        <div class="product-body">
+          <h3>Suporte para Álbum de Figurinhas</h3>
+          <p>Suporte prático para apoiar e organizar seu álbum durante a coleção.</p>
+          <ul class="benefits">
+            <li>Mantém o álbum bem posicionado</li>
+            <li>Design funcional</li>
+            <li>Feito em impressão 3D</li>
+          </ul>
+          <!-- 🔁 SUBSTITUIR: link Mercado Livre produto 4 -->
+          <a class="btn btn-gold btn-full" href="https://produto.mercadolivre.com.br/link-do-produto-4" target="_blank" rel="noopener">
+            Comprar no Mercado Livre
+            <svg viewBox="0 0 24 24" width="16" height="16"><use href="#i-arrow"/></svg>
+          </a>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+
+<!-- =============================================================
+     3 · CATEGORIAS
+     ============================================================= -->
+<section class="section section-light" id="produtos">
+  <div class="container">
+    <div class="section-head">
+      <div>
+        <div class="kicker light"><span class="kicker-num">02</span> · Catálogo</div>
+        <h2 class="h-display dark">Produtos para colecionar,<br/>presentear e <span class="gold-text">personalizar</span></h2>
+      </div>
+      <p class="section-lede dark">Sete frentes de produto — todas finalizadas no Mercado Livre.</p>
+    </div>
+
+    <div class="cat-grid">
+      <a class="cat-card cat-feature" href="#copa">
+        <svg viewBox="0 0 24 24"><use href="#i-trophy"/></svg>
+        <h3>Copa do Mundo</h3>
+        <p>Porta figurinhas, troféus, chaveiros e suportes temáticos.</p>
+        <span class="cat-link">Ver produtos →</span>
+      </a>
+      <a class="cat-card" href="#produtos-grid">
+        <svg viewBox="0 0 24 24"><use href="#i-key"/></svg>
+        <h3>Chaveiros personalizados</h3>
+        <p>Peças criativas para lembrancinhas, presentes, eventos e dia a dia.</p>
+        <span class="cat-link">Ver produtos →</span>
+      </a>
+      <a class="cat-card" href="#produtos-grid">
+        <svg viewBox="0 0 24 24"><use href="#i-grid"/></svg>
+        <h3>Organizadores</h3>
+        <p>Soluções funcionais para mesa, coleção e organização.</p>
+        <span class="cat-link">Ver produtos →</span>
+      </a>
+      <a class="cat-card" href="#produtos-grid">
+        <svg viewBox="0 0 24 24"><use href="#iso-mark-line"/></svg>
+        <h3>Decoração</h3>
+        <p>Peças decorativas com design moderno e temático.</p>
+        <span class="cat-link">Ver produtos →</span>
+      </a>
+      <a class="cat-card" href="#produtos-grid">
+        <svg viewBox="0 0 24 24"><use href="#i-gift"/></svg>
+        <h3>Presentes criativos</h3>
+        <p>Ideias originais para presentear em qualquer ocasião.</p>
+        <span class="cat-link">Ver produtos →</span>
+      </a>
+      <a class="cat-card" href="#personalizados">
+        <svg viewBox="0 0 24 24"><use href="#i-tag"/></svg>
+        <h3>Brindes e lembrancinhas</h3>
+        <p>Produção sob orçamento para empresas, festas e eventos.</p>
+        <span class="cat-link">Ver produtos →</span>
+      </a>
+      <a class="cat-card" href="#personalizados">
+        <svg viewBox="0 0 24 24"><use href="#i-tools"/></svg>
+        <h3>Peças sob encomenda</h3>
+        <p>Tem uma ideia? Desenvolvemos a peça para você.</p>
+        <span class="cat-link">Ver produtos →</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+
+<!-- =============================================================
+     4 · POR QUE MALLI3D
+     ============================================================= -->
+<section class="section section-graphite">
+  <div class="container">
+    <div class="section-head">
+      <div>
+        <div class="kicker"><span class="kicker-num">03</span> · Por que Malli3D</div>
+        <h2 class="h-display">Impressão 3D com qualidade,<br/>criatividade e <span class="gold-text">acabamento premium</span></h2>
+      </div>
+      <p class="section-lede">
+        A Malli3D cria produtos em impressão 3D pensados para unir funcionalidade, design e personalização. Cada peça é produzida com cuidado, buscando bom acabamento, resistência e uma apresentação diferenciada.
+      </p>
+    </div>
+
+    <div class="why-grid">
+      <div class="why-card">
+        <svg viewBox="0 0 24 24"><use href="#i-cube"/></svg>
+        <h3>Produção própria</h3>
+        <p>Todo o processo é interno — modelagem, impressão e acabamento.</p>
+      </div>
+      <div class="why-card">
+        <svg viewBox="0 0 24 24"><use href="#i-spark"/></svg>
+        <h3>Acabamento premium</h3>
+        <p>Camadas refinadas, pintura controlada e detalhes que diferenciam.</p>
+      </div>
+      <div class="why-card">
+        <svg viewBox="0 0 24 24"><use href="#iso-mark-line"/></svg>
+        <h3>Produtos criativos e exclusivos</h3>
+        <p>Designs originais que você não encontra na prateleira do shopping.</p>
+      </div>
+      <div class="why-card">
+        <svg viewBox="0 0 24 24"><use href="#i-tools"/></svg>
+        <h3>Personalização sob orçamento</h3>
+        <p>Nome, logo, tema ou peça inédita — envie sua ideia e avaliamos.</p>
+      </div>
+      <div class="why-card">
+        <svg viewBox="0 0 24 24"><use href="#i-shield"/></svg>
+        <h3>Compra segura pelo Mercado Livre</h3>
+        <p>Pagamento protegido, frete rastreado e atendimento garantido.</p>
+      </div>
+      <div class="why-card">
+        <svg viewBox="0 0 24 24"><use href="#i-gift"/></svg>
+        <h3>Para presente, organização e decoração</h3>
+        <p>Versáteis o suficiente para você usar, colecionar ou presentear.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- =============================================================
+     5 · COMO COMPRAR
+     ============================================================= -->
+<section class="section section-light" id="como-comprar">
+  <div class="container">
+    <div class="section-head">
+      <div>
+        <div class="kicker light"><span class="kicker-num">04</span> · Passo a passo</div>
+        <h2 class="h-display dark">Como comprar seu produto <span class="gold-text">Malli3D</span></h2>
+      </div>
+    </div>
+
+    <ol class="steps">
+      <li>
+        <span class="step-num">01</span>
+        <h3>Escolha o produto</h3>
+        <p>Veja os modelos disponíveis na nossa vitrine.</p>
+      </li>
+      <li>
+        <span class="step-num">02</span>
+        <h3>Clique no botão de compra</h3>
+        <p>Você será direcionado para o anúncio do produto no Mercado Livre.</p>
+      </li>
+      <li>
+        <span class="step-num">03</span>
+        <h3>Finalize com segurança</h3>
+        <p>O pagamento e a entrega são realizados pelo ambiente seguro do Mercado Livre.</p>
+      </li>
+      <li>
+        <span class="step-num">04</span>
+        <h3>Receba em casa</h3>
+        <p>Após a confirmação, seu pedido segue conforme as condições do anúncio.</p>
+      </li>
+    </ol>
+
+    <div class="steps-note">
+      <svg viewBox="0 0 24 24" width="18" height="18"><use href="#i-shield"/></svg>
+      <span>Você compra com a segurança, pagamento e entrega do <strong>Mercado Livre</strong>.</span>
+    </div>
+  </div>
+</section>
+
+
+<!-- =============================================================
+     6 · PERSONALIZAÇÃO
+     ============================================================= -->
+<section class="section section-custom" id="personalizados">
+  <div class="container custom-grid">
+    <div class="custom-copy">
+      <div class="kicker"><span class="kicker-num">05</span> · Sob encomenda</div>
+      <h2 class="h-display">Tem uma ideia? A Malli3D <span class="gold-text italic">transforma em produto</span>.</h2>
+      <p class="section-lede">
+        Criamos peças personalizadas em impressão 3D para presentes, brindes, empresas, eventos, lembrancinhas, decoração e organização. Envie sua ideia e avaliamos a possibilidade de produção.
+      </p>
+      <ul class="custom-list">
+        <li>Chaveiros com nomes</li>
+        <li>Brindes para empresas</li>
+        <li>Lembrancinhas para eventos</li>
+        <li>Peças decorativas</li>
+        <li>Organizadores sob medida</li>
+        <li>Produtos temáticos</li>
+      </ul>
+      <div class="cta-row">
+        <!-- 🔁 SUBSTITUIR: trocar o número do WhatsApp (55 + DDD + número) -->
+        <a class="btn btn-gold" href="https://wa.me/5500000000000" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" width="16" height="16"><use href="#i-wa"/></svg>
+          Pedir orçamento no WhatsApp
+        </a>
+        <a class="btn btn-ghost" href="#produtos-grid">Ver ideias de produtos</a>
+      </div>
+    </div>
+
+    <div class="custom-visual" aria-hidden="true">
+      <div class="custom-frame">
+        <img src="img/personalizacao-malli3d.png" alt="Peças personalizadas em impressão 3D Malli3D" class="product-img product-img-product" loading="lazy" />
+        <div class="custom-meta">
+          <div>
+            <span class="kicker-tiny">BRIEFING</span>
+            <strong>Nome · Logo · Tema</strong>
+          </div>
+          <div>
+            <span class="kicker-tiny">PRAZO</span>
+            <strong>Sob orçamento</strong>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- =============================================================
+     7 · PRODUTOS — GRADE COMPLETA
+     ============================================================= -->
+<section class="section section-dark" id="produtos-grid">
+  <div class="container">
+    <div class="section-head">
+      <div>
+        <div class="kicker"><span class="kicker-num">06</span> · Vitrine</div>
+        <h2 class="h-display">Catálogo Malli3D</h2>
+      </div>
+      <p class="section-lede">Oito produtos prontos para você levar — finalização no Mercado Livre.</p>
+    </div>
+
+    <div class="grid-products">
+
+      <!-- ─── 1. Porta figurinhas ─── -->
+      <article class="pcard">
+        <a class="pcard-media" href="https://produto.mercadolivre.com.br/link-do-produto-1" target="_blank" rel="noopener"><!-- 🔁 link 1 -->
+          <!-- 🔁 SUBSTITUIR: foto real produto 1 -->
+          <img src="img/porta-figurinhas-copa.png" alt="Porta figurinhas da Copa Malli3D" class="product-img product-img-square" loading="lazy" />
+          <span class="pcard-badge">Copa</span>
+        </a>
+        <div class="pcard-body">
+          <h3>Porta Figurinhas da Copa</h3>
+          <p>Organizador temático para separar suas figurinhas repetidas, faltantes e favoritas.</p>
+          <span class="pcard-use">Uso · coleção</span>
+          <a class="btn btn-gold btn-sm btn-full" href="https://produto.mercadolivre.com.br/link-do-produto-1" target="_blank" rel="noopener">Comprar no Mercado Livre</a>
+        </div>
+      </article>
+
+      <!-- ─── 2. Chaveiro taça ─── -->
+      <article class="pcard">
+        <a class="pcard-media" href="https://produto.mercadolivre.com.br/link-do-produto-2" target="_blank" rel="noopener"><!-- 🔁 link 2 -->
+          <!-- 🔁 SUBSTITUIR: foto real produto 2 -->
+          <img src="img/chaveiro-taca-copa.png" alt="Chaveiro taça da Copa Malli3D" class="product-img product-img-square" loading="lazy" />
+          <span class="pcard-badge">Copa</span>
+        </a>
+        <div class="pcard-body">
+          <h3>Chaveiro Taça da Copa</h3>
+          <p>Chaveiro criativo em impressão 3D para torcedores e fãs de futebol.</p>
+          <span class="pcard-use">Uso · presente</span>
+          <a class="btn btn-gold btn-sm btn-full" href="https://produto.mercadolivre.com.br/link-do-produto-2" target="_blank" rel="noopener">Comprar no Mercado Livre</a>
+        </div>
+      </article>
+
+      <!-- ─── 3. Mini troféu ─── -->
+      <article class="pcard">
+        <a class="pcard-media" href="https://produto.mercadolivre.com.br/link-do-produto-3" target="_blank" rel="noopener"><!-- 🔁 link 3 -->
+          <!-- 🔁 SUBSTITUIR: foto real produto 3 -->
+          <img src="img/mini-trofeu-decorativo.png" alt="Mini troféu decorativo Malli3D" class="product-img product-img-square" loading="lazy" />
+          <span class="pcard-badge">Copa</span>
+        </a>
+        <div class="pcard-body">
+          <h3>Mini Troféu Decorativo</h3>
+          <p>Peça decorativa temática para entrar no clima da Copa.</p>
+          <span class="pcard-use">Uso · decoração</span>
+          <a class="btn btn-gold btn-sm btn-full" href="https://produto.mercadolivre.com.br/link-do-produto-3" target="_blank" rel="noopener">Comprar no Mercado Livre</a>
+        </div>
+      </article>
+
+      <!-- ─── 4. Suporte álbum ─── -->
+      <article class="pcard">
+        <a class="pcard-media" href="https://produto.mercadolivre.com.br/link-do-produto-4" target="_blank" rel="noopener"><!-- 🔁 link 4 -->
+          <!-- 🔁 SUBSTITUIR: foto real produto 4 -->
+          <img src="img/suporte-album-figurinhas.png" alt="Suporte para álbum Malli3D" class="product-img product-img-square" loading="lazy" />
+          <span class="pcard-badge">Copa</span>
+        </a>
+        <div class="pcard-body">
+          <h3>Suporte para Álbum</h3>
+          <p>Suporte prático para apoiar e organizar seu álbum de figurinhas.</p>
+          <span class="pcard-use">Uso · coleção</span>
+          <a class="btn btn-gold btn-sm btn-full" href="https://produto.mercadolivre.com.br/link-do-produto-4" target="_blank" rel="noopener">Comprar no Mercado Livre</a>
+        </div>
+      </article>
+
+      <!-- ─── 5. Organizador figurinhas ─── -->
+      <article class="pcard">
+        <a class="pcard-media" href="https://produto.mercadolivre.com.br/link-do-produto-5" target="_blank" rel="noopener"><!-- 🔁 link 5 -->
+          <!-- 🔁 SUBSTITUIR: foto real produto 5 -->
+          <img src="img/organizador-figurinhas.png" alt="Organizador de figurinhas Malli3D" class="product-img product-img-square" loading="lazy" />
+          <span class="pcard-badge alt">Organização</span>
+        </a>
+        <div class="pcard-body">
+          <h3>Organizador de Figurinhas</h3>
+          <p>Mais praticidade para colecionar, separar e guardar suas figurinhas.</p>
+          <span class="pcard-use">Uso · coleção</span>
+          <a class="btn btn-gold btn-sm btn-full" href="https://produto.mercadolivre.com.br/link-do-produto-5" target="_blank" rel="noopener">Comprar no Mercado Livre</a>
+        </div>
+      </article>
+
+      <!-- ─── 6. Chaveiro personalizado ─── -->
+      <article class="pcard">
+        <a class="pcard-media" href="https://produto.mercadolivre.com.br/link-do-produto-6" target="_blank" rel="noopener"><!-- 🔁 link 6 -->
+          <!-- 🔁 SUBSTITUIR: foto real produto 6 -->
+          <img src="img/chaveiro-personalizado-nome.png" alt="Chaveiro personalizado com nome Malli3D" class="product-img product-img-square" loading="lazy" />
+          <span class="pcard-badge alt">Personalizado</span>
+        </a>
+        <div class="pcard-body">
+          <h3>Chaveiro Personalizado com Nome</h3>
+          <p>Chaveiros com nomes, temas e formatos personalizados.</p>
+          <span class="pcard-use">Uso · presente</span>
+          <a class="btn btn-gold btn-sm btn-full" href="https://produto.mercadolivre.com.br/link-do-produto-6" target="_blank" rel="noopener">Comprar no Mercado Livre</a>
+        </div>
+      </article>
+
+      <!-- ─── 7. Organizador mesa ─── -->
+      <article class="pcard">
+        <a class="pcard-media" href="https://produto.mercadolivre.com.br/link-do-produto-7" target="_blank" rel="noopener"><!-- 🔁 link 7 -->
+          <!-- 🔁 SUBSTITUIR: foto real produto 7 -->
+          <img src="img/organizador-mesa.png" alt="Organizador de mesa Malli3D" class="product-img product-img-square" loading="lazy" />
+          <span class="pcard-badge alt">Organização</span>
+        </a>
+        <div class="pcard-body">
+          <h3>Organizador de Mesa</h3>
+          <p>Peças funcionais para deixar sua mesa mais prática e organizada.</p>
+          <span class="pcard-use">Uso · escritório</span>
+          <a class="btn btn-gold btn-sm btn-full" href="https://produto.mercadolivre.com.br/link-do-produto-7" target="_blank" rel="noopener">Comprar no Mercado Livre</a>
+        </div>
+      </article>
+
+      <!-- ─── 8. Lembrancinhas ─── -->
+      <article class="pcard">
+        <a class="pcard-media" href="https://produto.mercadolivre.com.br/link-do-produto-8" target="_blank" rel="noopener"><!-- 🔁 link 8 -->
+          <!-- 🔁 SUBSTITUIR: foto real produto 8 -->
+          <img src="img/lembrancinhas-personalizadas.png" alt="Lembrancinhas personalizadas Malli3D" class="product-img product-img-square" loading="lazy" />
+          <span class="pcard-badge alt">Eventos</span>
+        </a>
+        <div class="pcard-body">
+          <h3>Lembrancinhas Personalizadas</h3>
+          <p>Produtos criativos para eventos, empresas, festas e datas especiais.</p>
+          <span class="pcard-use">Uso · evento</span>
+          <a class="btn btn-gold btn-sm btn-full" href="https://produto.mercadolivre.com.br/link-do-produto-8" target="_blank" rel="noopener">Comprar no Mercado Livre</a>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- =============================================================
+     8 · CONFIANÇA
+     ============================================================= -->
+<section class="section section-graphite">
+  <div class="container">
+    <div class="section-head">
+      <div>
+        <div class="kicker"><span class="kicker-num">07</span> · Confiança</div>
+        <h2 class="h-display">Compra simples, segura e <span class="gold-text">transparente</span></h2>
+      </div>
+      <p class="section-lede">
+        A Malli3D apresenta os produtos nesta vitrine, mas a finalização da compra acontece diretamente no Mercado Livre, garantindo mais segurança e praticidade para o cliente.
+      </p>
+    </div>
+
+    <div class="trust-grid">
+      <div class="trust-item"><svg viewBox="0 0 24 24"><use href="#i-shield"/></svg><span>Compra finalizada pelo Mercado Livre</span></div>
+      <div class="trust-item"><svg viewBox="0 0 24 24"><use href="#i-bolt"/></svg><span>Pagamento protegido</span></div>
+      <div class="trust-item"><svg viewBox="0 0 24 24"><use href="#i-truck"/></svg><span>Envio conforme anúncio</span></div>
+      <div class="trust-item"><svg viewBox="0 0 24 24"><use href="#i-chat"/></svg><span>Atendimento direto</span></div>
+      <div class="trust-item"><svg viewBox="0 0 24 24"><use href="#i-spark"/></svg><span>Produtos feitos com cuidado</span></div>
+      <div class="trust-item"><svg viewBox="0 0 24 24"><use href="#i-cube"/></svg><span>Peças criativas em impressão 3D</span></div>
+    </div>
+  </div>
+</section>
+
+
+<!-- =============================================================
+     9 · AVALIAÇÕES — placeholders (substituir por reais)
+     ============================================================= -->
+<section class="section section-light">
+  <div class="container">
+    <div class="section-head">
+      <div>
+        <div class="kicker light"><span class="kicker-num">08</span> · Opiniões</div>
+        <h2 class="h-display dark">O que os clientes dizem</h2>
+      </div>
+      <p class="section-lede dark">
+        <!-- 🔁 SUBSTITUIR: estas avaliações são placeholders. Trocar por avaliações reais do Mercado Livre. -->
+        Avaliações coletadas dos pedidos realizados pelo Mercado Livre.
+      </p>
+    </div>
+
+    <div class="review-grid">
+      <figure class="review">
+        <div class="stars" aria-label="5 estrelas">
+          <svg viewBox="0 0 24 24"><use href="#i-star"/></svg>
+          <svg viewBox="0 0 24 24"><use href="#i-star"/></svg>
+          <svg viewBox="0 0 24 24"><use href="#i-star"/></svg>
+          <svg viewBox="0 0 24 24"><use href="#i-star"/></svg>
+          <svg viewBox="0 0 24 24"><use href="#i-star"/></svg>
+        </div>
+        <blockquote>“Produto muito bem acabado e criativo. Ótima opção para presente.”</blockquote>
+        <figcaption>Cliente verificado · Mercado Livre</figcaption>
+      </figure>
+      <figure class="review">
+        <div class="stars" aria-label="5 estrelas">
+          <svg viewBox="0 0 24 24"><use href="#i-star"/></svg>
+          <svg viewBox="0 0 24 24"><use href="#i-star"/></svg>
+          <svg viewBox="0 0 24 24"><use href="#i-star"/></svg>
+          <svg viewBox="0 0 24 24"><use href="#i-star"/></svg>
+          <svg viewBox="0 0 24 24"><use href="#i-star"/></svg>
+        </div>
+        <blockquote>“Chegou bem embalado e atendeu ao que eu precisava.”</blockquote>
+        <figcaption>Cliente verificado · Mercado Livre</figcaption>
+      </figure>
+      <figure class="review">
+        <div class="stars" aria-label="5 estrelas">
+          <svg viewBox="0 0 24 24"><use href="#i-star"/></svg>
+          <svg viewBox="0 0 24 24"><use href="#i-star"/></svg>
+          <svg viewBox="0 0 24 24"><use href="#i-star"/></svg>
+          <svg viewBox="0 0 24 24"><use href="#i-star"/></svg>
+          <svg viewBox="0 0 24 24"><use href="#i-star"/></svg>
+        </div>
+        <blockquote>“Gostei muito da ideia e da qualidade da peça.”</blockquote>
+        <figcaption>Cliente verificado · Mercado Livre</figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+
+<!-- =============================================================
+     10 · FAQ
+     ============================================================= -->
+<section class="section section-graphite" id="faq">
+  <div class="container faq-wrap">
+    <div class="section-head">
+      <div>
+        <div class="kicker"><span class="kicker-num">09</span> · FAQ</div>
+        <h2 class="h-display">Perguntas frequentes</h2>
+      </div>
+    </div>
+
+    <div class="faq-list">
+      <details>
+        <summary>A compra é feita por esse site?<span class="faq-icon" aria-hidden="true">+</span></summary>
+        <p>Não. A página apresenta os produtos da Malli3D e a compra é finalizada com segurança pelo Mercado Livre.</p>
+      </details>
+      <details>
+        <summary>Vocês fazem produtos personalizados?<span class="faq-icon" aria-hidden="true">+</span></summary>
+        <p>Sim. Dependendo da peça, a Malli3D pode desenvolver produtos personalizados sob orçamento.</p>
+      </details>
+      <details>
+        <summary>Qual o prazo de produção?<span class="faq-icon" aria-hidden="true">+</span></summary>
+        <p>O prazo pode variar conforme o produto, quantidade e disponibilidade. As informações principais estarão no anúncio do Mercado Livre.</p>
+      </details>
+      <details>
+        <summary>Os produtos são resistentes?<span class="faq-icon" aria-hidden="true">+</span></summary>
+        <p>Os produtos são produzidos em impressão 3D com materiais adequados para cada finalidade, buscando bom acabamento, resistência e funcionalidade.</p>
+      </details>
+      <details>
+        <summary>Vocês fazem brindes ou lembrancinhas em quantidade?<span class="faq-icon" aria-hidden="true">+</span></summary>
+        <p>Sim. É possível solicitar orçamento para lembrancinhas, brindes e peças personalizadas em maior quantidade.</p>
+      </details>
+      <details>
+        <summary>Posso pedir uma peça com nome, logo ou tema específico?<span class="faq-icon" aria-hidden="true">+</span></summary>
+        <p>Sim. Envie sua ideia pelo WhatsApp para avaliarmos a possibilidade de personalização.</p>
+      </details>
+    </div>
+  </div>
+</section>
+
+
+<!-- =============================================================
+     11 · CTA FINAL
+     ============================================================= -->
+<section class="section section-cta" id="contato">
+  <div class="container cta-final">
+    <svg class="cta-mark" viewBox="0 0 100 100" aria-hidden="true"><use href="#iso-mark"/></svg>
+    <div class="kicker"><span class="kicker-num">10</span> · Próximo passo</div>
+    <h2 class="h-display xl">Escolha seu produto 3D e<br/>compre com <span class="gold-text">segurança</span>.</h2>
+    <p class="section-lede center">
+      Veja os modelos disponíveis da Malli3D, escolha seu favorito e finalize sua compra pelo Mercado Livre.
+    </p>
+    <div class="cta-row center">
+      <!-- 🔁 SUBSTITUIR: link geral loja Mercado Livre -->
+      <a class="btn btn-gold btn-lg" href="https://lista.mercadolivre.com.br/_CustId_MALLI3D" target="_blank" rel="noopener">
+        Ver produtos no Mercado Livre
+        <svg viewBox="0 0 24 24" width="18" height="18"><use href="#i-arrow"/></svg>
+      </a>
+      <!-- 🔁 SUBSTITUIR: número do WhatsApp -->
+      <a class="btn btn-ghost btn-lg" href="https://wa.me/5500000000000" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" width="18" height="18"><use href="#i-wa"/></svg>
+        Falar no WhatsApp
+      </a>
+    </div>
+  </div>
+</section>
+
+</main>
+
+
+<!-- =============================================================
+     FOOTER
+     ============================================================= -->
+<footer class="site-footer">
+  <div class="container footer-grid">
+    <div class="footer-brand">
+      <a href="#top" class="brand">
+        <svg class="brand-mark" viewBox="0 0 100 100"><use href="#iso-mark"/></svg>
+        <span class="brand-text">
+          <span class="brand-name">Malli<em>3D</em></span>
+          <span class="brand-tag">Impressões Premium</span>
+        </span>
+      </a>
+      <p>Malli3D — Produtos criativos, personalizados e funcionais em impressão 3D.</p>
+    </div>
+    <div class="footer-col">
+      <h4>Loja</h4>
+      <!-- 🔁 SUBSTITUIR: links da loja -->
+      <a href="https://lista.mercadolivre.com.br/_CustId_MALLI3D" target="_blank" rel="noopener">Mercado Livre</a>
+      <a href="#produtos-grid">Produtos</a>
+      <a href="#personalizados">Personalizados</a>
+      <a href="#copa">Copa do Mundo</a>
+    </div>
+    <div class="footer-col">
+      <h4>Contato</h4>
+      <!-- 🔁 SUBSTITUIR: redes sociais -->
+      <a href="https://instagram.com/malli3d" target="_blank" rel="noopener">Instagram @malli3d</a>
+      <a href="https://wa.me/5500000000000" target="_blank" rel="noopener">WhatsApp</a>
+      <a href="/cdn-cgi/l/email-protection#5734383923362338173a363b3b3e64337934383a793525"><span class="__cf_email__" data-cfemail="84e7ebeaf0e5f0ebc4e9e5e8e8edb7e0aae7ebe9aae6f6">[email&#160;protected]</span></a>
+    </div>
+    <div class="footer-col">
+      <h4>Atendimento</h4>
+      <a href="#como-comprar">Como comprar</a>
+      <a href="#faq">Perguntas frequentes</a>
+      <a href="#contato">Falar agora</a>
+    </div>
+  </div>
+  <div class="container footer-bottom">
+    <span>© 2026 Malli3D · Impressões Premium</span>
+    <span class="muted">As compras são finalizadas no ambiente seguro do Mercado Livre.</span>
+  </div>
+</footer>
+
+
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+  // Mobile menu toggle
+  const toggle = document.getElementById('menu-toggle');
+  const nav = document.getElementById('nav-menu');
+  const header = document.getElementById('site-header');
+  toggle.addEventListener('click', () => {
+    const open = nav.classList.toggle('open');
+    toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+    toggle.classList.toggle('is-open', open);
+  });
+  nav.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
+    nav.classList.remove('open');
+    toggle.classList.remove('is-open');
+    toggle.setAttribute('aria-expanded', 'false');
+  }));
+
+  // Header shadow on scroll
+  const onScroll = () => header.classList.toggle('scrolled', window.scrollY > 12);
+  onScroll();
+  window.addEventListener('scroll', onScroll, { passive: true });
+</script>
+
+</body>
+</html>
